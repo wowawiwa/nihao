@@ -1,6 +1,972 @@
-<html>
-<head></head>
-<body>
-  Hello
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- utf-8 contains almost all chars in all human languages -->
+    <meta charset="utf-8">
+
+    <!-- responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nihao!</title>
+
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open Sans:400,600" rel="stylesheet">
+    <style>
+
+      /* Globals */
+
+      body {
+        margin: 0;
+        box-sizing: border-box;
+
+        font-family: 'Open Sans', sans-serif;
+        color: #252525;
+        font-size: 1.2em;
+        line-height: 1.8;
+      }
+
+      /* Containers */
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 5px;
+      }
+
+      .header {
+        padding: 3em 0;
+
+        margin-bottom: 150px;
+
+        text-align: center;
+        font-size: 4em;
+        /*#ffff70; #fffdd8;*/
+        color: white;
+        letter-spacing: 0.1em;
+
+        /*compressed/2-beijing_4-great-wall_WechatIMG66.jpg*/
+        /*compressed/shanghai_IMG_20190309_061446.jpg*/
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./compressed/2-beijing_4-great-wall_WechatIMG66.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .context {
+        background: #ffeaea;
+      }
+      .china {
+        background: #fffdd8;
+      }
+
+      .gallery {
+        margin: 1em 0;
+      }
+
+      /* Titles */
+
+      .header, .location-indicator, .day-indicator, .post-indicator {
+        display: block;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      /* Backgrounded */
+
+      .context, .post-indicator, .china {
+        padding: 0 1em;
+        border-radius: 10px;
+      }
+
+      /* Indicators */
+
+      .location-indicator {
+        margin: 150px 0 0 0;
+        text-align: right;
+
+        color: red;
+        opacity: 0.5;
+        /*background-color: red;
+        color: white;*/
+        font-size: 4em;
+        /*font-style: italic;*/
+      }
+      .location-indicator::after {
+        display: block;
+        font-size: 0.2em;
+        margin-top: -0.5em;
+        opacity: 0.3;
+        content: "\A" attr(data-duration);
+      }
+      .day-indicator {
+        margin: 150px 0 0 0;
+        text-align: left;
+        /*margin-left: -2em;*/
+
+        color: red;
+        opacity: 0.75;
+        font-size: 3em;
+      }
+      .post-indicator {
+        margin-top: 100px;
+        text-align: center;
+
+        font-size: 1.3em;
+
+        opacity: 0.75;
+        background-color: red;
+        color: white;
+      }
+      .day-indicator::after {
+        display: block;
+        font-size: 0.2em;
+        margin-top: -0.5em;
+        opacity: 0.3;
+        content: "\A" "Day " attr(data-day) ;
+      }
+
+      /* Semantics */
+
+      .context, .china {
+        margin-top: 100px;
+      }
+
+      strong {
+      }
+
+      .eat, .bar, .area, .practical {
+        font-style: italic;
+        font-weight: 900;
+      }
+    </style>
+    <!-- https://github.com/henrygd/bigpicture -->
+    <script src="https://cdn.jsdelivr.net/npm/bigpicture@2.1.1/dist/BigPicture.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      Charles in China
+    </div>
+
+
+    <div class="container">
+      <div class="context">
+        <p>
+          I spent <strong>2 weeks</strong> in China altogether, from Wednesday to Wednesday (from 5 to 20 March 2019).
+          I was based in <strong>Shanghai</strong>, at Hans, but I spent most of the time in other places:
+          <strong>Six days in Beijing</strong> from the first Saturday to Thursday evening;
+          <strong>two days around Huangshan</strong> from Friday to Sunday evening, as part part of an organised country-side trip;
+          and <strong>one day in Hangzhou</strong> on the Tuesday before I left.
+        </p>
+
+        <p>There is a shy attempt to index the bars, restaurants, and other stuff that might be useful to travellers. You can use the
+<code>eat</code>, <code>bar</code>, <code>area</code>, <code>china</code>, and <code>practical</code> CSS classes to find them.</p>
+
+        <p>Most pictures are from my Pixel 2. A dozen are from Hans's iPhone. A few are from the Huangshan group. Two are from the internet (the one from Dali restaurant, and the forbidden city from the outside). The name of the pictures allows you to know what comes from where.</p>
+      </div>
+
+      <span class="location-indicator" data-duration="2.5 days">Shanghai</span>
+
+      <span class="day-indicator" data-day="1">Wednesday</span>
+
+      <span class="post-indicator">From the airport to the city</span>
+
+      <p>I make friend with Wolfram in the plane, who is German but spend half of his time in the north of China since a few years. We go together to the city using the Maglev and the taxi.</p>
+
+      <p>On the way out in the airport, there is a booth proposing a <strong>SIM card for 250¥</strong> with 20GB of data. I have no idea if it's a good deal. Wolfram says it's cheap. I heard later you can have it for even cheaper. I took it and didn't regret: Data proved to be extremely useful and it got all setup in less than 2 minutes in english.</p>
+
+      <p>The <span class="practical">Maglev</span> brings you from the airport to the city center in <strong>7 minutes</strong>, <strong>50¥</strong> (6€), and <strong>431 km/h</strong>. Comparing with Parisian Orly and Roissy airport makes me cry!</p>
+      <div class="gallery">
+        <a href="compressed/1-shanghai_1-arrival_IMG_20190306_100539.jpg"><img data-bp="compressed/1-shanghai_1-arrival_IMG_20190306_100539.jpg" src="thumbs/1-shanghai_1-arrival_IMG_20190306_100539.jpg" data-caption="With Wolfram in the Maglev."></a>
+        <a href="compressed/1-shanghai_1-arrival_IMG_20190306_102441~2.jpg"><img data-bp="compressed/1-shanghai_1-arrival_IMG_20190306_102441~2.jpg" src="thumbs/1-shanghai_1-arrival_IMG_20190306_102441~2.jpg"></a>
+        <a href="compressed/1-shanghai_1-arrival_IMG_20190320_101823~2.jpg"><img data-bp="compressed/1-shanghai_1-arrival_IMG_20190320_101823~2.jpg" src="thumbs/1-shanghai_1-arrival_IMG_20190320_101823~2.jpg" data-caption="431km/h maintained a minute or two!"></a>
+      </div>
+
+      <span class="post-indicator">Dinner at Lost Heaven</span>
+
+      <p>Hans and I enjoy our first dinner at <span class="eat">Lost Heaven</span>, a restaurant with an intimate athmosphere that proposes delicious Yunnanese dishes (The Yunnan is a region of the south of China).
+
+      <div class="gallery">
+        <a href="compressed/1-shanghai_2-lost-heaven_IMG_20190306_232932.jpg"><img data-bp="compressed/1-shanghai_2-lost-heaven_IMG_20190306_232932.jpg" src="thumbs/1-shanghai_2-lost-heaven_IMG_20190306_232932.jpg"></a>
+      </div>
+
+      <span class="day-indicator" data-day="2">Thursday</span>
+
+      <div class="context">
+        <p>
+          For my first day of visit in Shanghai, I meet <span class="people">Martine (Adrien's mother) and Aude</span>. Their husband's business trip is the initial reason they are in Shanghai.
+        </p>
+        <p>
+          We meet in the <span class="area">French concession</span>, one of the most cosy area of Shanghai which is also central, but we won't stay long there today.
+        </p>
+      </div>
+
+      <span class="post-indicator">Around People's square</span>
+      <p>We have a coffee at the terasse of a hotel nearby.</p>
+      <div class="gallery">
+        <a href="compressed/1-shanghai_3-bund_IMG_20190307_173547.jpg"><img data-bp="compressed/1-shanghai_3-bund_IMG_20190307_173547.jpg" src="thumbs/1-shanghai_3-bund_IMG_20190307_173547.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Nanjing road and the Bund</span>
+      <p>
+        <span class="area">Nanjing road</span> is a chic and famous street that connects <span class="area">People's square</span> and the <span class="area">Bund</span> - the border of the river facing <span class="area">Pudong</span>.
+      </p>
+      <p>
+        Pudong is the business district of Shanghai which hosts plenty of towers. Among them the <span class="area">Shanghai Tower</span>, the 2nd biggest tower in the world, 632m high. I find it organic and elegant.
+      </p>
+      <p>
+        There are plenty of nice buildings on this street, as well as street food stalls. I take this opportunity to eat a skewer.
+      </p>
+      <div class="gallery">
+        <a href="compressed/1-shanghai_3-bund_IMG_20190307_211340.jpg"><img data-bp="compressed/1-shanghai_3-bund_IMG_20190307_211340.jpg" src="thumbs/1-shanghai_3-bund_IMG_20190307_211340.jpg"></a>
+        <a href="compressed/1-shanghai_3-bund_IMG_20190307_212123.jpg"><img data-bp="compressed/1-shanghai_3-bund_IMG_20190307_212123.jpg" src="thumbs/1-shanghai_3-bund_IMG_20190307_212123.jpg"></a>
+        <a href="compressed/1-shanghai_3-bund_IMG_20190307_212903.jpg"><img data-bp="compressed/1-shanghai_3-bund_IMG_20190307_212903.jpg" src="thumbs/1-shanghai_3-bund_IMG_20190307_212903.jpg"></a>
+        <a href="compressed/1-shanghai_3-bund_PANO_20190307_211826.vr.jpg"><img data-bp="compressed/1-shanghai_3-bund_PANO_20190307_211826.vr.jpg" src="thumbs/1-shanghai_3-bund_PANO_20190307_211826.vr.jpg"></a>
+      </div>
+
+
+      <span class="day-indicator" data-day="3">Friday</span>
+
+      <span class="post-indicator">Pudong</span>
+      <p>I visit <span class="area">Pudong</span> on my own before joining Martine, Aude, François and Nicolas for the evening.</p>
+      <div class="gallery">
+        <a href="compressed/streetfood_IMG_20190308_144238.jpg"><img data-bp="compressed/streetfood_IMG_20190308_144238.jpg" src="thumbs/streetfood_IMG_20190308_144238.jpg"></a>
+        <a href="compressed/1-shanghai_4-pudong_IMG_20190308_142601.jpg"><img data-bp="compressed/1-shanghai_4-pudong_IMG_20190308_142601.jpg" src="thumbs/1-shanghai_4-pudong_IMG_20190308_142601.jpg"></a>
+        <a href="compressed/1-shanghai_4-pudong_IMG_20190308_153114.jpg"><img data-bp="compressed/1-shanghai_4-pudong_IMG_20190308_153114.jpg" src="thumbs/1-shanghai_4-pudong_IMG_20190308_153114.jpg"></a>
+        <a href="compressed/1-shanghai_4-pudong_PANO_20190308_155407.vr.jpg"><img data-bp="compressed/1-shanghai_4-pudong_PANO_20190308_155407.vr.jpg" src="thumbs/1-shanghai_4-pudong_PANO_20190308_155407.vr.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Dinner at Southern Barbarian</span>
+
+      <p><span class="eat">Southern Barbarian</span> also serves Yunnan food, but in a more casual athmosphere and price. It is delicious as well. The Yunnan region seems to have a strong cultural recognition: It's in the top-destinations of many guides and apparently its cuisine is recognised.</p>
+
+      <p>Aude <span class="practical">found this restaurant in the Petit Futé</span> if I'm not mistaking.</p>
+
+      <span class="post-indicator">Party in the French Concession</span>
+
+      <p>Hans joins us there and we then go to a party at <span class="bar">Funkadeli</span> bar, close by. It's hype and crowded but still very nice.</p>
+
+      <span class="location-indicator" data-duration="6 days">Beijing</span>
+
+      <span class="day-indicator" data-day="4">Saturday</span>
+
+      <span class="post-indicator">Getting to Beijing</span>
+
+      <p>We wake up early after not much sleep to get the train at 8:00.</p>
+
+      <a href="compressed/shanghai_IMG_20190309_061446.jpg"><img data-bp="compressed/shanghai_IMG_20190309_061446.jpg" src="thumbs/shanghai_IMG_20190309_061446.jpg"></a>
+
+
+      <p>Most Shanghai-Beijing train need 6h, except the last two of the day which make it in 4h.</p>
+
+      <p>The train is great: fast, clean, with power plugs of all sorts on every seat. It's not allowed to disturb your neighboors with phone calls or videos.</p>
+
+      <span class="post-indicator">Getting to the hotel</span>
+
+      <p>We decide to go to the center walking, and go through a big and beautiful park where people do all sorts of things: Singing, dancing, yoga, meditation, or other activities I cannot identify.</p>
+
+      <p>People feel free to do what they like, they're doing their thing, in an indifference of what others might look at or think. It's fine if you watch at them, it's fine if you don't. That seems to be a pattern in China altogether.</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_1-park_IMG_20190309_130653.jpg"><img data-bp="compressed/2-beijing_1-park_IMG_20190309_130653.jpg" src="thumbs/2-beijing_1-park_IMG_20190309_130653.jpg"></a>
+      </div>
+
+      <p>Hans must leave to go to a business meeting his boss slaped him with.</p>
+
+      <p>My feet suddenly start to hurt (blisters) and getting to the hotel is unexpectedly laborious for many reasons: Cabs are sparse and refuse to go to the hotel for some mysterious reasons, subway stations are closed because an important conference is taking place, security checks agent make me open my bag to inspect... my bottle of water. I feel like one of the two pigeons in the Lafontaine fable.</p>
+
+      <p>Also, good to know: <span class="practical">All subway stations are like Chatelet les Halles, i.e. plan to walk to go in, out, and transfers.</span></p>
+
+      <p>When getting closer to the hotel (according to the map at least), I can't imagine how the nice mansion I saw in pictures possibly could sit in those never-ending chaotic grey lanes. Here a picture of one of those typical street that I took later:</p>
+
+      <a href="compressed/beijing-hutongs.jpg"><img data-bp="compressed/beijing-hutongs.jpg" src="thumbs/beijing-hutongs.jpg"></a>
+
+      <p>I'll discover later that what looks like Islamabad periurban area at first glance is actually the precious remainings of traditional Beijing architecture, typical of the <strong>Hutongs</strong>. A <emph>Hutong</emph> is a Beijinger neighboorhood or "Kietz" in German. They're absolutely charming once you know them, know the codes and what might be inside, and take a closer look!</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_2-hotel_IMG_20190309_155704.jpg"><img data-bp="compressed/2-beijing_2-hotel_IMG_20190309_155704.jpg" src="thumbs/2-beijing_2-hotel_IMG_20190309_155704.jpg"></a>
+        <a href="compressed/2-beijing_2-hotel_IMG_20190311_125519.jpg"><img data-bp="compressed/2-beijing_2-hotel_IMG_20190311_125519.jpg" src="thumbs/2-beijing_2-hotel_IMG_20190311_125519.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Dinner at Dali</span>
+
+      <p>We enjoy a lot the dinner at the <span class="eat">Dali courtyard</span> restaurant. Same as the hotel, the place is in a Hutong and it looks impossible from the outside. Inside, it's built around a charming patio (quick tip: if you want a nice place, just build it around a patio!), discreetly lighted. Everything is nice, the place, the food and the ambiance. The chefs are French and Chinese, we believe. The dinner consists in many courses meant to be shared that you do not choose. They are all well made and we like them all, even the shrimps.</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_3-luogu_IMG_20190310_091735.jpg"><img data-bp="compressed/2-beijing_3-luogu_IMG_20190310_091735.jpg" src="thumbs/2-beijing_3-luogu_IMG_20190310_091735.jpg"></a>
+        <a href="compressed/2-beijing_3-luogu_Dali-restaurant.jpg"><img data-bp="compressed/2-beijing_3-luogu_Dali-restaurant.jpg" src="thumbs/2-beijing_3-luogu_Dali-restaurant.jpg"></a>
+      </div>
+
+      <p>On the way back, we walk through an animated street (I believe <strong>Luogu road</strong>). Every Hutong seems to have one or a few such a streets. Believe it or not, we encounter a Chocolate con Churros stall (Chinese version). What a perfect evening :)</p>
+
+      <p>The hotel and the restaurant are close to <span class="area">Nanluoguxiang subway station and the Doufuchi Hutong</span> which I can only recommend as an area.</p>
+
+      <span class="day-indicator" data-day="5">Sunday</span>
+
+      <span class="post-indicator">The Great Wall</span>
+      <p>There are many spots to visit the Great Wall (more or less 10). <span class="area">Mutianyu</span> is not too far (1h30) and it is described as a good option by many sources (guides, blogs, hotel).</p>
+      <p><span class="practical">We go there with the cab</span>, for more or less the same price as a bus, namely 220¥! That's something internet didn't say.
+      Maybe because we use Dudu (the local Uber), and I think you need a Chinese bank account to have access to it.</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_112418.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_112418.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_112418.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_125240.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_125240.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_125240.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_125437.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_125437.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_125437.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_125938.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_125938.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_125938.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_130001.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_130001.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_130001.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_131310.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_131310.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_131310.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_133848.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_133848.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_133848.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_141242.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_141242.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_141242.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_141508.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_141508.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_141508.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG59.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG59.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG59.jpg"></a>
+
+        <p>We don't take the telecabin. There is only one choice to make: right or left. We took left, and I think it was the right choice (but I'm not   sure) as the wall seemed higher and longer there.</p>
+
+        <p>At some point, the path is officially over: The way is bricked up. But a few people are climbing and continue further. We did it as well and it was really worth it. There is almost nobody on the other side, the wall is wilder, and there are very nice views.</p>
+
+        <p>A banner warns us in a clear way: <strong>Last chance to get a beer</strong>. A ghost is sitting here, selling fresh beers and red rubans featuring different wishes among other things. We buy two beers, and Hans a ruban to secure himself a bright future. The custom is to tie them to a tree. We had a great contact with the ghost, he was so nice, helpful, and elegant!</p>
+
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG60.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG60.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG60.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG42.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG42.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG42.jpg"></a>
+
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_143600.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_143600.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_143600.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_143912.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_143912.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_143912.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_145254.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_145254.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_145254.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_150023.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_150023.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_150023.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_150415.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_150415.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_150415.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_151234.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_151234.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_151234.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_151354.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_151354.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_151354.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_151857.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_151857.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_151857.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_152400.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_152400.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_152400.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG52.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG52.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG52.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG53.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG53.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG53.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG58.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG58.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG58.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG64.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG64.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG64.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_WechatIMG66.jpg"><img data-bp="compressed/2-beijing_4-great-wall_WechatIMG66.jpg" src="thumbs/2-beijing_4-great-wall_WechatIMG66.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_153205.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_153205.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_153205.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_153654.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_153654.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_153654.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_154045.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_154045.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_154045.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_155339.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_155339.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_155339.jpg"></a>
+        <a href="compressed/2-beijing_4-great-wall_IMG_20190310_155923.jpg"><img data-bp="compressed/2-beijing_4-great-wall_IMG_20190310_155923.jpg" src="thumbs/2-beijing_4-great-wall_IMG_20190310_155923.jpg"></a>
+      </div>
+
+      <p>On the way back, we're almost the last ones and we don't know exactly how to go back. Some drivers propose insanely insistingly their services, but they aren't official ones and you can't rely on them blindly: They ask a high price to bring you only to a bus station. You better agree very clearly on the destination and the price beforehand. We don't find an agreement. </p>
+
+      <p>There is noone left and we don't know where the bus station is. One driver keep following us and insisting. When we finally get closer to the bus station, he lowers the price, and we come to a deal. 220¥ for Beijing center, as for the way in. Hans didn't sell us off for cheap!</p>
+
+      <p>The way back took ages as there was a lot of jam in Beijing (and also because the driver didn't take the highway, presumably to avoid the toll).</p>
+
+      <span class="post-indicator">Dinner at Wangfujing food street</span>
+      <p>We look for a good restaurant, and first follow the Petit Futé restaurant map. But after 3 non-existing places and a lot of walking, we conclude the map is bugged or outdated and resign ourselves to rely on our noses. By pure chance, we run into the famous <span class="eat">night street food</span> giving on to Wangfujing (the local Champs Elysée, which are quite impressive).</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_5-wangfujing_IMG_20190310_205055.jpg"><img data-bp="compressed/2-beijing_5-wangfujing_IMG_20190310_205055.jpg" src="thumbs/2-beijing_5-wangfujing_IMG_20190310_205055.jpg"></a>
+        <a href="compressed/2-beijing_5-wangfujing_IMG_20190310_205149.jpg"><img data-bp="compressed/2-beijing_5-wangfujing_IMG_20190310_205149.jpg" src="thumbs/2-beijing_5-wangfujing_IMG_20190310_205149.jpg"></a>
+      </div>
+
+      <span class="day-indicator" data-day="6">Monday</span>
+
+      <span class="post-indicator">The Summer Palace</span>
+      <p>The summer palace is magnificent if you ask me! It features a wide variety of traditional architecture and places. A lot of different evocations come to mind, including Chihiro sometimes.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_164842.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_164842.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_164842.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_165559.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_165559.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_165559.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_170419.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_170419.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_170419.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_170738_1.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_170738_1.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_170738_1.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_171201.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_171201.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_171201.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_172900.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_172900.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_172900.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_173012.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_173012.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_173012.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_173144.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_173144.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_173144.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_173734.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_173734.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_173734.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_173831.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_173831.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_173831.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_173936.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_173936.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_173936.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_174232.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_174232.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_174232.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_174629.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_174629.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_174629.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_174715.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_174715.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_174715.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_174729.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_174729.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_174729.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_174759.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_174759.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_174759.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_180405.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_180405.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_180405.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_180658.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_180658.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_180658.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_181233.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_181233.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_181233.jpg"></a>
+        <a href="compressed/2-beijing_6-summer-palace_IMG_20190311_181404.jpg"><img data-bp="compressed/2-beijing_6-summer-palace_IMG_20190311_181404.jpg" src="thumbs/2-beijing_6-summer-palace_IMG_20190311_181404.jpg"></a>
+      </div>
+
+      <div class="context">
+        <p>Hans must leave around 5pm to get the last train of the day for Shanghai as he works on the next day. I decide to stay 2 more days in Beijing because there is so much to see!</p>
+      </div>
+
+      <span class="post-indicator">Is Wangfujing 24/7?</span>
+
+      <p>Yesterday on Sunday at 21:00, everything was open Wangfujing: Shops, street food... But Monday at 22:00, everything is closed! Fortunately I have an extra pair of socks.</p>
+
+      <p>I took my first Rickshaw to go there, and naively thought he was driving like crazy. But that's just a matter of calibration that will get fixed on the next day.</p>
+
+      <p>Back at the hotel, I notice that I actually didn't have dinner, and enjoy the fragments of my four last Leipniz Vollkorn before falling asleep.</p>
+
+      <span class="day-indicator" data-day="7">Tuesday</span>
+
+      <span class="post-indicator">The forbidden city</span>
+
+      <p>
+      It's immense and impressive, or rather impressive by its immensity. I probably had too much expectations or standards because of the Summer Palace.
+      The palace of supreme harmony, the palace of preserved harmony, the palace of central harmony, the door of heavenly purity... All this looks pretty much the same to me. I don't manage to focus much on what the audioguide tells.
+      I prefer places where I can imagine how people use it in their day to day life. This place is rather for serving a complex imperial protocol that I don't manage to get into.</p>
+
+      <p>Practical detail: <span class="practical">To go to the forbidden city</span>, I went between the forbidden city and Tiananmen, and I first had to pass a security check. This took quite a while because there was a huge queue. I discovered that another way, from the East side of the forbidden city, would bring me at the same spot without the security check.</p>
+
+      <p>The way I discoverred that is because en english speaking Hong-Kongese engaged conversation with me, and told me I should see an avenue not far away before going to the forbidden city. He said it's free, featuring great things and less crowded. I followed him for a while, then realized we were walking in the direction of Wangfujing that I could see already. It seemed we were out of the forbidden city and I should pass through the security check again, but in fact no. Even if he kept repeating <i>I'm a chinese, it's my second time in Beijing!! you trust me!</i>, in front of what seemed simply irrefutable, I  declared I went there already and that I would go back to the forbidden city. His last words were <i>I don't like you</i>. It made me very sad. I still have haunting doubts whether or not there was something more to see that I didn't know of, and I'll need to return to Beijing one day and inspect this whole area again to make sure.</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_7-forbidden-city_internet-pic.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_internet-pic.jpg" src="thumbs/2-beijing_7-forbidden-city_internet-pic.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_130529~2.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_130529~2.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_130529~2.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_140004.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_140004.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_140004.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_141000.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_141000.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_141000.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_141104~2.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_141104~2.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_141104~2.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_141627~2.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_141627~2.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_141627~2.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_141833~2.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_141833~2.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_141833~2.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_142331~2.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_142331~2.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_142331~2.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_142431.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_142431.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_142431.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_142533.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_142533.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_142533.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_143530.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_143530.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_143530.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_144137.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_144137.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_144137.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_144541.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_144541.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_144541.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_145332.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_145332.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_145332.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_150025.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_150025.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_150025.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_150032.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_150032.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_150032.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_154142.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_154142.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_154142.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_163026.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_163026.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_163026.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_163254~2.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_163254~2.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_163254~2.jpg"></a>
+        <a href="compressed/2-beijing_7-forbidden-city_IMG_20190312_163608.jpg"><img data-bp="compressed/2-beijing_7-forbidden-city_IMG_20190312_163608.jpg" src="thumbs/2-beijing_7-forbidden-city_IMG_20190312_163608.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Hutong visit in a rickshaw</span>
+      <p>A rickshaw driver (it's a bike with a trailer), about 50 years old, and who speaks english (that's not common) approaches me when I go out of the forbidden city. I ask him to go to Tiananmen square, and he lets me know it's closed today because of a conference. He proposes me a tour of a Hutong and to drop me close to the northern park, which seems like a good idea. I know the Hutongs already, but he says he'll explain me plenty of things. In the lack of any better plan, I accept the tour (negociating the price).</p>
+      <p>He indeed explains me interesting stuff. If there are 5 pieces of wood that stand out on the top of the red doors, it means the house is richer than if there are 3. If the 2 stones on the side of the door is squared, it's a judge. If it's round, it's the army. He finishes all his explanation with a sound and smilling "You understand?? OKKKKAYYYYYY!", served with a light splutter. He is good fun!</p>
+      <p>I refuse two times his proposal to drink tea because I want to still have sun in the park. He stops and guides me to his friend's shady living room, small and with no window, where we get tea, prepared according to an alchemical complex process that involves throwing the watter directly on the tray at many steps of the preparation, and serving the tea into recipients that were likely never washed. After some talking I manage to have him unlock the room door and get us back on the way, but not before he proposed me to buy some tea.</p>
+
+      <span class="post-indicator">Beihai park</span>
+      <p>This park overlooks the forbidden city.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_9-jingshan-park_IMG_20190312_173418~2.jpg"><img data-bp="compressed/2-beijing_9-jingshan-park_IMG_20190312_173418~2.jpg" src="thumbs/2-beijing_9-jingshan-park_IMG_20190312_173418~2.jpg"></a>
+        <a href="compressed/2-beijing_9-jingshan-park_IMG_20190312_173451.jpg"><img data-bp="compressed/2-beijing_9-jingshan-park_IMG_20190312_173451.jpg" src="thumbs/2-beijing_9-jingshan-park_IMG_20190312_173451.jpg"></a>
+        <a href="compressed/2-beijing_9-jingshan-park_IMG_20190312_173810.jpg"><img data-bp="compressed/2-beijing_9-jingshan-park_IMG_20190312_173810.jpg" src="thumbs/2-beijing_9-jingshan-park_IMG_20190312_173810.jpg"></a>
+        <a href="compressed/2-beijing_9-jingshan-park_IMG_20190312_175908.jpg"><img data-bp="compressed/2-beijing_9-jingshan-park_IMG_20190312_175908.jpg" src="thumbs/2-beijing_9-jingshan-park_IMG_20190312_175908.jpg"></a>
+        <a href="compressed/2-beijing_9-jingshan-park_PANO_20190312_174100.vr.jpg"><img data-bp="compressed/2-beijing_9-jingshan-park_PANO_20190312_174100.vr.jpg" src="thumbs/2-beijing_9-jingshan-park_PANO_20190312_174100.vr.jpg"></a>
+      </div>
+
+      <div class="context">
+
+        <ul>
+          <li>
+            In China, <strong>some simple things become complicated</strong> for foreigners, especially all what is related to maps:
+            <ul>
+              <li>
+                <strong>Finding a shop to buy electronic is complicated</strong> because 1) Google doesn't work great 2) MapsMe (Maps.me) sucks at finding "electronics" or anything like this 3) The Chinese Google (Amap app in this case, aka Baidu map) is in Chinese, so even if you can search with latin alphabet, the results come back in Chinese chars.
+                There is no good systematic workaround. Looking on the internet, or possibly Foursquare.
+              </li>
+              <li><strong>Finding a good restaurant</strong> is complicated for the same reasons: No Google, no alternatives. Le Petit Fûté or Routard have their own maps which do not show the subway stations or the Chinese names that Taxi drivers ask for. So you need to find them on other mapping system. It takes ages and it's unreliable.</li>
+              <li><strong>Even finding a well named shop like Xiaomi is a challenge</strong>. If you find an address in Chinese, most of the time MapsMe won't find it (It seems to work only with latin alphabet). So you need to use Amap, but then you're not even sure it found what you looked for because the result is in Chinese.</li>
+            </ul>
+          </li>
+
+          <li>
+              <p>I notice how my <strong>my life is limited by my phone battery</strong>. The solution is a powerbank, but I'll only get it back in Shanghai.</p>
+              <p>The mobile phone is an essential need here more than anywhere else. Finding the hotel, finding something on a map, reading the guide, translation, taking pictures, telling the taxi where to go, chatting. Among other things, it's the only garantee you have to see texts in letters and not hanzi.</p>
+              <p>Xiaomi has recently released the third version of its <span class="practical">powerbank</span> which has, among other things, a USB-C connection (and two USB-A) and charges fast. I took the 20000mAh capacity version (the biggest) which only costs 200¥. But I would recommend to take the 10000 version, because the 20000 is too heavy and big.</p>
+          </li>
+        <p>
+      </div>
+
+      <span class="post-indicator">Sanlitun</span>
+      <p>Sanlitun area is not directly around the very center. It hosts posh bars and malls. I have a drink at the <span class="bar">Martini</span> which offers a cool view from the terrasse.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_10-sanlitun_IMG_20190312_215003.jpg"><img data-bp="compressed/2-beijing_10-sanlitun_IMG_20190312_215003.jpg" src="thumbs/2-beijing_10-sanlitun_IMG_20190312_215003.jpg"></a>
+        <a href="compressed/2-beijing_10-sanlitun_IMG_20190312_220517.jpg"><img data-bp="compressed/2-beijing_10-sanlitun_IMG_20190312_220517.jpg" src="thumbs/2-beijing_10-sanlitun_IMG_20190312_220517.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Rickshaw taxi on the way back</span>
+      <p><span class="practical">Rickshaws are clearly the fastest way to move in the city</span>. They don't respect any traffic rule: They go to the red lights on huge crossing or use one-way streets the wrong way. Bikes in Berlin are good students in comparison. I'm pretty sure the two posts aren't as large as the rickshaw on the first video.</p>
+      <div class="gallery">
+        <video width="495" height="278" controls preload="metadata">
+          <source src="videos/beijing-rickshaw1.mp4" type="video/mp4">
+        </video>
+        <video width="495" height="278" controls preload="metadata">
+          <source src="videos/beijing-rickshaw2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p>The video do not translate the experience in a fully faithful way. In truth, this happens accelerated twice. Also, everything shakes like crazy, it feels like it's going to fall into pieces at any moment. The closest experience I had from this before is in the Futuroscope (a leisure parc), where you take a crazy virtual train on a seat equiped with hydraulic cylinders. Or the movie Taxi from Luc Besson.</p>
+
+      <span class="day-indicator" data-day="8">Wednesday</span>
+
+      <span class="post-indicator">Houhai lake</span>
+      <div class="gallery">
+        <a href="compressed/2-beijing_11-houhai-lake_IMG_20190313_103605~2.jpg"><img data-bp="compressed/2-beijing_11-houhai-lake_IMG_20190313_103605~2.jpg" src="thumbs/2-beijing_11-houhai-lake_IMG_20190313_103605~2.jpg"></a>
+        <a href="compressed/2-beijing_11-houhai-lake_IMG_20190313_105301.jpg"><img data-bp="compressed/2-beijing_11-houhai-lake_IMG_20190313_105301.jpg" src="thumbs/2-beijing_11-houhai-lake_IMG_20190313_105301.jpg"></a>
+        <a href="compressed/2-beijing_11-houhai-lake_IMG_20190313_112040.jpg"><img data-bp="compressed/2-beijing_11-houhai-lake_IMG_20190313_112040.jpg" src="thumbs/2-beijing_11-houhai-lake_IMG_20190313_112040.jpg"></a>
+        <a href="compressed/2-beijing_11-houhai-lake_IMG_20190313_113115.jpg"><img data-bp="compressed/2-beijing_11-houhai-lake_IMG_20190313_113115.jpg" src="thumbs/2-beijing_11-houhai-lake_IMG_20190313_113115.jpg"></a>
+
+        <a href="compressed/2-beijing_12-yandaixie_IMG_20190311_134325.jpg"><img data-bp="compressed/2-beijing_12-yandaixie_IMG_20190311_134325.jpg" src="thumbs/2-beijing_12-yandaixie_IMG_20190311_134325.jpg"></a>
+        <a href="compressed/2-beijing_12-yandaixie_IMG_20190311_140927.jpg"><img data-bp="compressed/2-beijing_12-yandaixie_IMG_20190311_140927.jpg" src="thumbs/2-beijing_12-yandaixie_IMG_20190311_140927.jpg"></a>
+        <a href="compressed/2-beijing_12-yandaixie_IMG_20190311_141356.jpg"><img data-bp="compressed/2-beijing_12-yandaixie_IMG_20190311_141356.jpg" src="thumbs/2-beijing_12-yandaixie_IMG_20190311_141356.jpg"></a>
+        <a href="compressed/2-beijing_12-yandaixie_IMG_20190313_114020.jpg"><img data-bp="compressed/2-beijing_12-yandaixie_IMG_20190313_114020.jpg" src="thumbs/2-beijing_12-yandaixie_IMG_20190313_114020.jpg"></a>
+      </div>
+
+      <span class="post-indicator">798</span>
+      <p>798 is Beijing's art are. It's quite big, hosts a lot of cafés, restaurants, and of course exhibitions. Very enjoyable, go for it!
+      </p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_13-798_IMG_20190313_132638.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_132638.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_132638.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_153630.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_153630.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_153630.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_153636.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_153636.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_153636.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_154045.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_154045.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_154045.jpg"></a>
+      </div>
+
+      <p>Among other things, there is the UCCA center. It's 100¥ to get in (compared to many other exhibition and galleries which are free) but it was very much worth it.</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_13-798_2019_03_27_15_57_officelens.jpg"><img data-bp="compressed/2-beijing_13-798_2019_03_27_15_57_officelens.jpg" src="thumbs/2-beijing_13-798_2019_03_27_15_57_officelens.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_163038.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_163038.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_163038.jpg"></a>
+        <a href="compressed/2-beijing_13-798_2019_03_27_15_56_officelens.jpg"><img data-bp="compressed/2-beijing_13-798_2019_03_27_15_56_officelens.jpg" src="thumbs/2-beijing_13-798_2019_03_27_15_56_officelens.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_163513~2.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_163513~2.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_163513~2.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_164131.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_164131.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_164131.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_164205.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_164205.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_164205.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_165711.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_165711.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_165711.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_170632.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_170632.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_170632.jpg" data-caption="I have the same seats at home :)"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_171032.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_171032.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_171032.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_171319.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_171319.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_171319.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_171401.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_171401.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_171401.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_171552.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_171552.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_171552.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_171652.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_171652.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_171652.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_171728.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_171728.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_171728.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_172033.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_172033.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_172033.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_173650.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_173650.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_173650.jpg" data-caption="A data center in a church (In Barcelona I believe)"></a>
+      </div>
+
+      <p>The exhibition I enjoyed the most aside from UCCA is the Tokyo gallery. </p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_13-798_IMG_20190313_153030.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_153030.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_153030.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_153039.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_153039.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_153039.jpg"></a>
+      </div>
+
+      <p>I found the other galleries interesting but most pieces exposed would have been too flashy for my living room.</p>
+
+      <div class="gallery">
+        <a href="compressed/2-beijing_13-798_IMG_20190313_134710.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_134710.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_134710.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_134821.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_134821.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_134821.jpg"></a>
+        <a href="compressed/2-beijing_13-798_IMG_20190313_134925~2.jpg"><img data-bp="compressed/2-beijing_13-798_IMG_20190313_134925~2.jpg" src="thumbs/2-beijing_13-798_IMG_20190313_134925~2.jpg"></a>
+      </div>
+
+      <div class="context">
+        <p>I decide to stay one more night in Beijing. I use the <span class="practical">Booking</span> app to find a hotel (the <span class="practical">Wangfujing Courtyard</span>; its location is convenient and pleasant).</p>
+
+        <p>Other apps I use: <br>
+          - <span class="practical">Trip.com</span> is possibly the main book app in China for everything (train, hotel, flights, ...). I used it only for the trains and it worked amazingly. If you use it for hotels, make sure those aren't exclusively for Chinese, I heard it happens.<br>
+          - <span class="practical">MetroMan</span> is a China-wide subway map, very simple and well done. Never had a complain.
+        </p>
+
+        <p>I also book a place at the Chaoyang theater for the evening. I'd like to see so Chinese performance, and this show was praised by the guide.</p>
+      </div>
+
+      <span class="post-indicator">Chaoyang theater</span>
+      <p>The diverse aspects of China are told during 1 hour through all kinds of acrobatics and costumes. It costs around 40€. Worth it!</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_183906.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_183906.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_183906.jpg"></a>
+      </div>
+        <a href="compressed/2-beijing_14-chaoyang_PANO_20190313_184642.vr~3.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_PANO_20190313_184642.vr~3.jpg" src="thumbs/2-beijing_14-chaoyang_PANO_20190313_184642.vr~3.jpg"></a>
+      <div class="gallery">
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_190851.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_190851.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_190851.jpg"></a>
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_191901.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_191901.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_191901.jpg"></a>
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_192706.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_192706.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_192706.jpg"></a>
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_192740~3.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_192740~3.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_192740~3.jpg"></a>
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_194703~2.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_194703~2.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_194703~2.jpg"></a>
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_195615~3.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_195615~3.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_195615~3.jpg"></a>
+        <a href="compressed/2-beijing_14-chaoyang_IMG_20190313_195943.jpg"><img data-bp="compressed/2-beijing_14-chaoyang_IMG_20190313_195943.jpg" src="thumbs/2-beijing_14-chaoyang_IMG_20190313_195943.jpg"></a>
+      </div>
+
+      <span class="day-indicator" data-day="9">Thursday</span>
+
+      <span class="post-indicator">A lesson about Art</span>
+      <p>As I'm on Wangfujing on my way to Tian'anmen, some Chinese enlish speaking guy comes to talk with me. I skip the 15 minutes conversation: He teaches Chinese to foreign students, he also does caligraphy, and by chance, he has an exhibition 50m away from here. I pause my train booking and go with him, on the 2nd floor of the Foreign language building. </p>
+      <p>Indeed, there are some hand made piece of work, and I find them interesting. He explains me how they should be read: A fish is the symbol for wealth. A fishermen is the symbol of someone who enjoys the way more than the end. He explains me a few other ones, it's really interesting.</p>
+      <p>And finally we get to the point, where I should buy something. It starts gentle, but step by step he drops all what diplomacy and respect is based on. I tell him I don't want to have in my living room something that reminds me how scamed I got, so I may come back later if I want to buy something. He seems to understand the sentence, but still wants one thing: You to buy some pieces. But not for money: For cultural sharing. I finally manage to leave while keeping up this situation's appearances of dignity.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_15-wangfujing_IMG_20190314_130923.jpg"><img data-bp="compressed/2-beijing_15-wangfujing_IMG_20190314_130923.jpg" src="thumbs/2-beijing_15-wangfujing_IMG_20190314_130923.jpg"></a>
+        <a href="compressed/2-beijing_15-wangfujing_IMG_20190314_130934.jpg"><img data-bp="compressed/2-beijing_15-wangfujing_IMG_20190314_130934.jpg" src="thumbs/2-beijing_15-wangfujing_IMG_20190314_130934.jpg"></a>
+        <a href="compressed/2-beijing_15-wangfujing_IMG_20190314_131049.jpg"><img data-bp="compressed/2-beijing_15-wangfujing_IMG_20190314_131049.jpg" src="thumbs/2-beijing_15-wangfujing_IMG_20190314_131049.jpg"></a>
+        <a href="compressed/2-beijing_15-wangfujing_IMG_20190314_131056.jpg"><img data-bp="compressed/2-beijing_15-wangfujing_IMG_20190314_131056.jpg" src="thumbs/2-beijing_15-wangfujing_IMG_20190314_131056.jpg"></a>
+      </div>
+
+      <div class="context">
+        <p>
+          There are 2 last fast trains between Beijing and Shanghai, at 19:00 and 19:08. They are also quicker, 4 hours instead of 6. It's 14:00, and I book the train of 19:08 with the Trip.com app.
+          <span class="practical">Most of the time, there are places until 5 hours before the train is leaving, but you feel it's kind of the last moment</span>.
+        </p>
+      </div>
+
+      <span class="post-indicator">Tian'anmen Square</span>
+      <p>Adjoins the forbidden city on the south. This square is huge, but you can only walk the edges of it. In the middle, plenty of communists monuments.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_15-tiananmen_IMG_20190312_130430.jpg"><img data-bp="compressed/2-beijing_15-tiananmen_IMG_20190312_130430.jpg" src="thumbs/2-beijing_15-tiananmen_IMG_20190312_130430.jpg"></a>
+        <a href="compressed/2-beijing_15-tiananmen_IMG_20190314_150433.jpg"><img data-bp="compressed/2-beijing_15-tiananmen_IMG_20190314_150433.jpg" src="thumbs/2-beijing_15-tiananmen_IMG_20190314_150433.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Qianmen Road</span>
+      <p><span class="area">Qianmen road</span> starts from Tiananmen and goes south. It's a nice commercial street.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_16-qianmen_IMG_20190309_145513.jpg"><img data-bp="compressed/2-beijing_16-qianmen_IMG_20190309_145513.jpg" src="thumbs/2-beijing_16-qianmen_IMG_20190309_145513.jpg"></a>
+        <a href="compressed/2-beijing_16-qianmen_IMG_20190314_151604.jpg"><img data-bp="compressed/2-beijing_16-qianmen_IMG_20190314_151604.jpg" src="thumbs/2-beijing_16-qianmen_IMG_20190314_151604.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Liulichang Road</span>
+      <p><span class="area">Liulichang road</span> is the artists road. There are plenty of paper shops and galleries. It feels calm and authentic, and there are some nice pieces of art.</p>
+      <div class="gallery">
+        <a href="compressed/2-beijing_16-qianmen-art_IMG_20190314_155313.jpg"><img data-bp="compressed/2-beijing_16-qianmen-art_IMG_20190314_155313.jpg" src="thumbs/2-beijing_16-qianmen-art_IMG_20190314_155313.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_155309.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_155309.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_155309.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_154628.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_154628.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_154628.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_155401.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_155401.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_155401.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_155511.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_155511.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_155511.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_160021.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_160021.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_160021.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_160038.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_160038.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_160038.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_160121.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_160121.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_160121.jpg"></a>
+        <a href="compressed/2-beijing_17-liuli_IMG_20190314_160319.jpg"><img data-bp="compressed/2-beijing_17-liuli_IMG_20190314_160319.jpg" src="thumbs/2-beijing_17-liuli_IMG_20190314_160319.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Muslim Neighboorhood</span>
+      <div class="gallery">
+        <a href="compressed/2-beijing_18-muslim_IMG_20190314_163708.jpg"><img data-bp="compressed/2-beijing_18-muslim_IMG_20190314_163708.jpg" src="thumbs/2-beijing_18-muslim_IMG_20190314_163708.jpg"></a>
+        <a href="compressed/2-beijing_18-muslim_IMG_20190314_164642.jpg"><img data-bp="compressed/2-beijing_18-muslim_IMG_20190314_164642.jpg" src="thumbs/2-beijing_18-muslim_IMG_20190314_164642.jpg"></a>
+        <a href="compressed/2-beijing_18-muslim_IMG_20190314_164737.jpg"><img data-bp="compressed/2-beijing_18-muslim_IMG_20190314_164737.jpg" src="thumbs/2-beijing_18-muslim_IMG_20190314_164737.jpg"></a>
+        <a href="compressed/2-beijing_18-muslim_IMG_20190314_165426.jpg"><img data-bp="compressed/2-beijing_18-muslim_IMG_20190314_165426.jpg" src="thumbs/2-beijing_18-muslim_IMG_20190314_165426.jpg"></a>
+      </div>
+
+      <div class="context">
+        <p>There are a few more things I'd have done if I had more time:</p>
+        <ul>
+          <li>The <span class="area">Palace of Heaven</span> seems as interesting as the <span class="area">Summer Palace</span>.</li>
+          <li>I read <span class="area">Wudaoku</span> is the student area. I'd have liked to hang around there on the evening.</li>
+          <li>Have gone inside a few monuments. I did none, and was also late in the forbidden city so there are spots I could not visit.</li>
+        </ul>
+      </div>
+
+      <div class="china">
+        <p>A few thoughts about Beijing and its difference with Shanghai:</p>
+        <ul>
+          <li><strong>Beijing is way more Chinese than Shanghai</strong>. It shows the contrast between tradition (the Hutongs) and modernity (Wangfujing), the popular (the Hutongs) and the elite (the Forbidden City) in a spectacular manner: They can be just a few metters away.</li>
+          <li><strong>Shanghai is historically open to the occident</strong>: There were concessions made to France and Grand Britain, meaning an area in the city where the foreign laws applies! It explains why it's less traditional, more modern, more occidental, and the mainland center of finance.</li>
+          <li>It <strong>feels more like the capital and the center of political power.</strong> Through the number of places where there are security checks or police, or historical places or monuments.</li>
+          <li><strong>Beijing, like Berlin, is not so easy to approach</strong>. The cool spots are isolated and sparse, a street away from the ordinary. It's easy to miss the hype! Also there are less taxis (but more Rickshaws).</li>
+        </p>
+      </div>
+
+      <span class="location-indicator" data-duration="1 day" data-count="2">Shanghai II</span>
+
+      <span class="post-indicator">Trying new things at dinner</span>
+      <p>Hans and I have dinner close to home, and we try some of the "weird" food such as tendons or chicken legs, to make it up that we didn't try the scorpions or spiders. Chicken legs are okay, but they were small. Tendons are like gelatin, it takes ages to shew. Not a big fan!</p>
+
+      <span class="day-indicator" data-day="10">Friday</span>
+
+      <div class="context">
+        <p>This day will be short as we must leave for the excursion at 18:15. I spend it going around the city to find equipement we might need for the trip and a powerbank at one of the rare Xiaomi store in Shanghai (usually people order online).</p>
+      </div>
+
+      <span class="post-indicator">Everyday Shanghai</span>
+      <div class="gallery">
+        <a href="compressed/shanghai_IMG_20190315_134341~2.jpg"><img data-bp="compressed/shanghai_IMG_20190315_134341~2.jpg" src="thumbs/shanghai_IMG_20190315_134341~2.jpg" data-caption="Vertical parking!"></a>
+        <a href="compressed/shanghai_IMG_20190315_135605.jpg"><img data-bp="compressed/shanghai_IMG_20190315_135605.jpg" src="thumbs/shanghai_IMG_20190315_135605.jpg"></a>
+        <a href="compressed/shanghai_IMG_20190315_153743.jpg"><img data-bp="compressed/shanghai_IMG_20190315_153743.jpg" src="thumbs/shanghai_IMG_20190315_153743.jpg"></a>
+        <a href="compressed/shanghai_IMG_20190315_154035.jpg"><img data-bp="compressed/shanghai_IMG_20190315_154035.jpg" src="thumbs/shanghai_IMG_20190315_154035.jpg" data-caption="Three stories mall full exclusively of clothing shops"></a>
+        <p>Bamboo scaffolds:</p>
+        <a href="compressed/shanghai_bambou-IMG_20190307_161606.jpg"><img data-bp="compressed/shanghai_bambou-IMG_20190307_161606.jpg" src="thumbs/shanghai_bambou-IMG_20190307_161606.jpg" data-caption="Scaffolds out of bamboos!"></a>
+        <p>The subway in Shanghai and Beijing are more or less the same:</p>
+        <a href="compressed/beijing-subway_IMG_20190311_150136.jpg"><img data-bp="compressed/beijing-subway_IMG_20190311_150136.jpg" src="thumbs/beijing-subway_IMG_20190311_150136.jpg"></a>
+        <a href="compressed/beijing-subway_IMG_20190311_225352.jpg"><img data-bp="compressed/beijing-subway_IMG_20190311_225352.jpg" src="thumbs/beijing-subway_IMG_20190311_225352.jpg"></a>
+      </div>
+
+      <span class="location-indicator" data-duration="2 days">Huangshan</span>
+
+      <span class="post-indicator">Friday evening in the bus</span>
+      <p>We leave at 18:15 with the bus, it feels like we're students again! We'll spend the time in an hotel on the road which impressed me although it was probably supposedly banal.</p>
+      <div class="gallery">
+        <a href="compressed/4-huangshan-1-arrival_IMG_20190315_192723.jpg"><img data-bp="compressed/4-huangshan-1-arrival_IMG_20190315_192723.jpg" src="thumbs/4-huangshan-1-arrival_IMG_20190315_192723.jpg"></a>
+        <a href="compressed/4-huangshan-1-arrival_IMG_20190316_011630.jpg"><img data-bp="compressed/4-huangshan-1-arrival_IMG_20190316_011630.jpg" src="thumbs/4-huangshan-1-arrival_IMG_20190316_011630.jpg"></a>
+        <a href="compressed/4-huangshan-1-arrival_PANO_20190316_002649.vr.jpg"><img data-bp="compressed/4-huangshan-1-arrival_PANO_20190316_002649.vr.jpg" src="thumbs/4-huangshan-1-arrival_PANO_20190316_002649.vr.jpg"></a>
+      </div>
+
+      <span class="day-indicator" data-day="11 - 12">Saturday - Sunday</span>
+
+      <span class="post-indicator">Walking around the villages</span>
+      <div class="gallery">
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_105900.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_105900.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_105900.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_130221.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_130221.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_130221.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_130222.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_130222.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_130222.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_132845~2.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_132845~2.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_132845~2.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_132958~2.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_132958~2.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_132958~2.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_154224.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_154224.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_154224.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_154418.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_154418.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_154418.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_155419.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_155419.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_155419.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_WechatIMG72.jpg"><img data-bp="compressed/4-huangshan-2-visit_WechatIMG72.jpg" src="thumbs/4-huangshan-2-visit_WechatIMG72.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_WechatIMG73.jpg"><img data-bp="compressed/4-huangshan-2-visit_WechatIMG73.jpg" src="thumbs/4-huangshan-2-visit_WechatIMG73.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_WechatIMG74.jpg"><img data-bp="compressed/4-huangshan-2-visit_WechatIMG74.jpg" src="thumbs/4-huangshan-2-visit_WechatIMG74.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_WechatIMG75.jpg"><img data-bp="compressed/4-huangshan-2-visit_WechatIMG75.jpg" src="thumbs/4-huangshan-2-visit_WechatIMG75.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_155603.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_155603.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_155603.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_160144.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_160144.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_160144.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_163136.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_163136.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_163136.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_163257~2.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_163257~2.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_163257~2.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_164301.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_164301.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_164301.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_164545.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_164545.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_164545.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_165020.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_165020.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_165020.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190316_170555.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190316_170555.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190316_170555.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190317_093434.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190317_093434.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190317_093434.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_IMG_20190317_095930.jpg"><img data-bp="compressed/4-huangshan-2-visit_IMG_20190317_095930.jpg" src="thumbs/4-huangshan-2-visit_IMG_20190317_095930.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_PANO_20190316_170003.vr.jpg"><img data-bp="compressed/4-huangshan-2-visit_PANO_20190316_170003.vr.jpg" src="thumbs/4-huangshan-2-visit_PANO_20190316_170003.vr.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_mmexport1552812011190.jpg"><img data-bp="compressed/4-huangshan-2-visit_mmexport1552812011190.jpg" src="thumbs/4-huangshan-2-visit_mmexport1552812011190.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_mmexport1552812464852.jpg"><img data-bp="compressed/4-huangshan-2-visit_mmexport1552812464852.jpg" src="thumbs/4-huangshan-2-visit_mmexport1552812464852.jpg"></a>
+        <a href="compressed/4-huangshan-2-visit_mmexport1552814773337.jpg"><img data-bp="compressed/4-huangshan-2-visit_mmexport1552814773337.jpg" src="thumbs/4-huangshan-2-visit_mmexport1552814773337.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Drinks at the alcool shop</span>
+      <p>We go drink alcool of all sorts (from roses or peaches) in a sweet little place and play the <strong>post-it</strong> game (I'm not the one who proposed it this time!).</p>
+      <div class="gallery">
+        <a href="compressed/4-huangshan-3-bar_IMG_20190316_200646~2.jpg"><img data-bp="compressed/4-huangshan-3-bar_IMG_20190316_200646~2.jpg" src="thumbs/4-huangshan-3-bar_IMG_20190316_200646~2.jpg"></a>
+        <a href="compressed/4-huangshan-3-bar_IMG_20190316_202212.jpg"><img data-bp="compressed/4-huangshan-3-bar_IMG_20190316_202212.jpg" src="thumbs/4-huangshan-3-bar_IMG_20190316_202212.jpg"></a>
+      </div>
+
+      <span class="location-indicator" data-duration="1 day" data-count="3">Shanghai III</span>
+
+      <span class="post-indicator">Drinks at Kartel</span>
+      <p>We go at the <span class="bar">Kartel</span> bar which has a nice rooftop together with Ryan, to debiref the travel one more time. It's not very cold tonight!</p>
+      <div class="gallery">
+        <a href="compressed/5-shanghai-1-sundayev_IMG_20190317_212327.jpg"><img data-bp="compressed/5-shanghai-1-sundayev_IMG_20190317_212327.jpg" src="thumbs/5-shanghai-1-sundayev_IMG_20190317_212327.jpg"></a>
+      </div>
+
+      <span class="day-indicator" data-day="13">Monday</span>
+
+      <div class="context">
+        <p>On Monday I finally proactively visit Shanghai. I saw <span class="area">People's square</span>, <span class="area">Nanjing road</span>, the <span class="area">Bund</span>, and <span class="area">Pudong</span> already. On my list of things to see:</p>
+
+        <ul>
+        <li>The <strong>Shikumen traditional architecture</strong> that can be seen in the <strong>Tianzi Fang</strong> area and the <strong>Xintiandi</strong> district.</li>
+
+        <li>The <strong>old town</strong>, in the middle of which lies the <strong>Confucius Temple</strong>.</li>
+
+        <li>The <strong>Yuan garden</strong>.</li>
+
+        <li>The <strong>French concession</strong>.</li>
+        </ul>
+
+        <p>We'd like to have seen the <strong>Sleep No More</strong> show, but it's closed on Monday and Tuesday. It's a theater play that happens during 1h in a whole building. Every member of the audience walks around freely and choses where to go and what to watch at, getting a unique experience.</p>
+      </div>
+
+      <span class="post-indicator">Shikumen architecture</span>
+      <div class="gallery">
+        <a href="compressed/5-shanghai-2-shikumen_IMG_20190318_110717.jpg"><img data-bp="compressed/5-shanghai-2-shikumen_IMG_20190318_110717.jpg" src="thumbs/5-shanghai-2-shikumen_IMG_20190318_110717.jpg"></a>
+        <a href="compressed/5-shanghai-2-shikumen_IMG_20190318_111044.jpg"><img data-bp="compressed/5-shanghai-2-shikumen_IMG_20190318_111044.jpg" src="thumbs/5-shanghai-2-shikumen_IMG_20190318_111044.jpg"></a>
+        <a href="compressed/5-shanghai-2-shikumen_IMG_20190318_112554.jpg"><img data-bp="compressed/5-shanghai-2-shikumen_IMG_20190318_112554.jpg" src="thumbs/5-shanghai-2-shikumen_IMG_20190318_112554.jpg"></a>
+        <a href="compressed/5-shanghai-2-shikumen_IMG_20190318_112630.jpg"><img data-bp="compressed/5-shanghai-2-shikumen_IMG_20190318_112630.jpg" src="thumbs/5-shanghai-2-shikumen_IMG_20190318_112630.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Around People's square</span>
+      <div class="gallery">
+        <a href="compressed/5-shanghai-2-2-ppsq_PANO_20190318_120249.vr.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_PANO_20190318_120249.vr.jpg" src="thumbs/5-shanghai-2-2-ppsq_PANO_20190318_120249.vr.jpg"></a>
+        <a href="compressed/5-shanghai-2-2-ppsq_IMG_20190318_121105.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_IMG_20190318_121105.jpg" src="thumbs/5-shanghai-2-2-ppsq_IMG_20190318_121105.jpg"></a>
+        <a href="compressed/5-shanghai-2-2-ppsq_IMG_20190318_121205.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_IMG_20190318_121205.jpg" src="thumbs/5-shanghai-2-2-ppsq_IMG_20190318_121205.jpg"></a>
+        <a href="compressed/5-shanghai-2-2-ppsq_IMG_20190318_122943.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_IMG_20190318_122943.jpg" src="thumbs/5-shanghai-2-2-ppsq_IMG_20190318_122943.jpg"></a>
+        <a href="compressed/5-shanghai-2-2-ppsq_IMG_20190318_123237.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_IMG_20190318_123237.jpg" src="thumbs/5-shanghai-2-2-ppsq_IMG_20190318_123237.jpg"></a>
+        <a href="compressed/5-shanghai-2-2-ppsq_IMG_20190318_124010.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_IMG_20190318_124010.jpg" src="thumbs/5-shanghai-2-2-ppsq_IMG_20190318_124010.jpg"></a>
+        <a href="compressed/5-shanghai-2-2-ppsq_IMG_20190318_124256.jpg"><img data-bp="compressed/5-shanghai-2-2-ppsq_IMG_20190318_124256.jpg" src="thumbs/5-shanghai-2-2-ppsq_IMG_20190318_124256.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Old town & Confucius temple</span>
+      <div class="gallery">
+        <a href="compressed/streetfood_IMG_20190318_132616.jpg"><img data-bp="compressed/streetfood_IMG_20190318_132616.jpg" src="thumbs/streetfood_IMG_20190318_132616.jpg"></a>
+        <a href="compressed/5-shanghai-3-oldtown_IMG_20190318_124531.jpg"><img data-bp="compressed/5-shanghai-3-oldtown_IMG_20190318_124531.jpg" src="thumbs/5-shanghai-3-oldtown_IMG_20190318_124531.jpg"></a>
+        <a href="compressed/5-shanghai-3-oldtown_IMG_20190318_125912.jpg"><img data-bp="compressed/5-shanghai-3-oldtown_IMG_20190318_125912.jpg" src="thumbs/5-shanghai-3-oldtown_IMG_20190318_125912.jpg"></a>
+        <a href="compressed/5-shanghai-3-oldtown_IMG_20190318_131253.jpg"><img data-bp="compressed/5-shanghai-3-oldtown_IMG_20190318_131253.jpg" src="thumbs/5-shanghai-3-oldtown_IMG_20190318_131253.jpg"></a>
+        <a href="compressed/5-shanghai-3-oldtown_IMG_20190318_131830.jpg"><img data-bp="compressed/5-shanghai-3-oldtown_IMG_20190318_131830.jpg" src="thumbs/5-shanghai-3-oldtown_IMG_20190318_131830.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Yuan Garden</span>
+      <p>I didn't expect this: Boarding the garden on the south, a mini-city full of stores and very crowded, in a traditional architectural style. Impressive! This also reminded me of Chihiro!</p>
+      <div class="gallery">
+        <a href="compressed/5-shanghai-4-yuyuan_PANO_20190318_135042.vr.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_PANO_20190318_135042.vr.jpg" src="thumbs/5-shanghai-4-yuyuan_PANO_20190318_135042.vr.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_PANO_20190318_140644.vr.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_PANO_20190318_140644.vr.jpg" src="thumbs/5-shanghai-4-yuyuan_PANO_20190318_140644.vr.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_135601.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_135601.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_135601.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_140101.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_140101.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_140101.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_140244.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_140244.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_140244.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_140806.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_140806.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_140806.jpg"></a>
+
+        <p>And the garden themselves.</p>
+
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_141409.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_141409.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_141409.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_144358.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_144358.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_144358.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_144754.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_144754.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_144754.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_145016.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_145016.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_145016.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_145203.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_145203.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_145203.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_150124.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_150124.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_150124.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_150318.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_150318.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_150318.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_151046.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_151046.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_151046.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_151954.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_151954.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_151954.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_152147.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_152147.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_152147.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_152347.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_152347.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_152347.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_152354.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_152354.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_152354.jpg"></a>
+        <a href="compressed/5-shanghai-4-yuyuan_IMG_20190318_153405.jpg"><img data-bp="compressed/5-shanghai-4-yuyuan_IMG_20190318_153405.jpg" src="thumbs/5-shanghai-4-yuyuan_IMG_20190318_153405.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Tianzi Fang</span>
+      <p>This area consisting in a few lanes hosts plenty of street food stalls and art shops. I bought the essentials: A drone (100¥) and never-ending matches for Gaspar (but they'll be confiscated in the airport, forbidden both in the hold and in the cabin!). Here a cool Panda mask (and pullover), but I found it too expensive and you have to glue it yourself.</p>
+      <div class="gallery">
+        <a href="compressed/5-shanghai-5-tianzifang_IMG_20190318_181447.jpg"><img data-bp="compressed/5-shanghai-5-tianzifang_IMG_20190318_181447.jpg" src="thumbs/5-shanghai-5-tianzifang_IMG_20190318_181447.jpg"></a>
+      </div>
+
+      <span class="location-indicator" data-duration="1 day">Hangzhou</span>
+
+      <span class="day-indicator" data-day="14">Tuesday</span>
+
+      <span class="post-indicator">Hangzhou lake</span>
+      <p>Hangzhou is a big city and capital of the region. It's not particularly scenic, except for it's exceptional west lake which is classified as an absolute must-see in China by most travel guides.</p>
+      <div class="gallery">
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_131949.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_131949.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_131949.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_133147.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_133147.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_133147.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_145325.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_145325.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_145325.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_145658_1.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_145658_1.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_145658_1.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_145719.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_145719.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_145719.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_152104.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_152104.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_152104.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_161459.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_161459.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_161459.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_163054.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_163054.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_163054.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_163844.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_163844.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_163844.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_164018.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_164018.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_164018.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_164252.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_164252.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_164252.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_164522.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_164522.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_164522.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_164707.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_164707.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_164707.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_171628.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_171628.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_171628.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_171848.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_171848.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_171848.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_172516.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_172516.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_172516.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_IMG_20190319_173058.jpg"><img data-bp="compressed/6-hongzhou-1-lake_IMG_20190319_173058.jpg" src="thumbs/6-hongzhou-1-lake_IMG_20190319_173058.jpg"></a>
+        <a href="compressed/6-hongzhou-1-lake_PANO_20190319_163512.vr.jpg"><img data-bp="compressed/6-hongzhou-1-lake_PANO_20190319_163512.vr.jpg" src="thumbs/6-hongzhou-1-lake_PANO_20190319_163512.vr.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Guo's villa on the lake</span>
+      <p>This villa sits on the west of the lake. It's 10¥ to go in, and from the outside it doesn't necessarily seem unmissable. In fact, I had very good feelings in this place. This was traditional style pushed at it's most elegant. Furnitures out of exotic wood, woodworks everywhere (also the posts are out of wood). And the overall layout of the villa. I took way too many pictures of it.</p>
+      <div class="gallery">
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_140329.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_140329.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_140329.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_140506.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_140506.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_140506.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_141113.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_141113.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_141113.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_141608.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_141608.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_141608.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_143834~2.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_143834~2.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_143834~2.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_143956.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_143956.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_143956.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_144246.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_144246.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_144246.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_144312.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_IMG_20190319_144312.jpg" src="thumbs/6-hongzhou-2-gaos-villa_IMG_20190319_144312.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_PANO_20190319_140155.vr.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_PANO_20190319_140155.vr.jpg" src="thumbs/6-hongzhou-2-gaos-villa_PANO_20190319_140155.vr.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_PANO_20190319_142556.vr.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_PANO_20190319_142556.vr.jpg" src="thumbs/6-hongzhou-2-gaos-villa_PANO_20190319_142556.vr.jpg"></a>
+        <a href="compressed/6-hongzhou-2-gaos-villa_PANO_20190319_143332.vr.jpg"><img data-bp="compressed/6-hongzhou-2-gaos-villa_PANO_20190319_143332.vr.jpg" src="thumbs/6-hongzhou-2-gaos-villa_PANO_20190319_143332.vr.jpg"></a>
+      </div>
+
+      <span class="post-indicator">Hongzhou train station</span>
+      <p>I found the train station quite impressive if you think about it. It's just huge. Also, although it's not blindingly obvious on the picture, it features something common and freaky in China: The same building built like 10 times, right next to each other. And this patterns may repeat itself again a few times close by. It's even more freaky when this happens in the middle of nowhere, in the country side; then it doesn't look like a bug in the Matrix but like Orc barracks in the Mordor.</p>
+      <div class="gallery">
+        <a href="compressed/6-hongzhou-3-gare_PANO_20190319_182733.vr.jpg"><img data-bp="compressed/6-hongzhou-3-gare_PANO_20190319_182733.vr.jpg" src="thumbs/6-hongzhou-3-gare_PANO_20190319_182733.vr.jpg"></a>
+        <a href="compressed/6-hongzhou-3-gare_PANO_20190319_184932.vr.jpg"><img data-bp="compressed/6-hongzhou-3-gare_PANO_20190319_184932.vr.jpg" src="thumbs/6-hongzhou-3-gare_PANO_20190319_184932.vr.jpg"></a>
+        <a href="compressed/6-hongzhou-3-gare_IMG_20190319_185403.jpg"><img data-bp="compressed/6-hongzhou-3-gare_IMG_20190319_185403.jpg" src="thumbs/6-hongzhou-3-gare_IMG_20190319_185403.jpg"></a>
+      </div>
+
+
+      <span class="location-indicator" data-duration="last night" data-count="4">Shanghai IV</span>
+
+      <span class="post-indicator">Panyu road bars</span>
+      <p>On the evening, we go into bars close by, on Panyu road, together with Ryan. It's not very crowded as it's Tuesday, but it's still nice.</p>
+
+      <span class="day-indicator" data-day="15">Wednesday</span>
+
+      <div class="context">
+        <p>My plane leaves at 12:40 from Pudong. It's hard to leave!</p>
+      </div>
+
+      <div class="china">
+        <p>A few impressions or thoughts about China:</p>
+        <ul>
+          <li>
+            About the <strong>political system</strong>: It different from the occidental one, as the state is very involved in the economy, and it's working at least in some important ways. What's the cost of this? Is it sustainable? Is it the future?
+          </li>
+          <li>
+            In China, <strong>religious and political power</strong> were not historically embodied in two persons (the king and the pope) but one (the emperor) as I've been explained.
+          </li>
+          <li>
+            I didn't cross a lot of occidental tourists, but a lot of asian tourists. That feels quite nice for some reason.
+          </li>
+          <li>
+            <strong>My impression of China: Impressive, disconcerting, contrasted, exciting, authentic</strong>.
+          </li>
+          <li>It seems like <strong>a lot of things that I attributed to Japan are originally Chinese</strong>, such as the traditional architectural and art style or the importance of protocol back in the days.</li>
+          <li>China seems <strong>super safe</strong>: No theft, no thread. The door of Hans's flat is virtually open all the time, even if there is always a roommate there.</li>
+          <li>People who <emph>spontaneously approached me</emph> in the streets always wanted something from me, but it can take half an hour before it becomes clear.</li>
+          <li>I found it a <strong>sweetspot how closely or not the rules are followed</strong>. Not blindly but reasonably, IMO. More France than Germany.</li>
+          <li><strong>Chinese people do their thing</strong>. They don't seem to care much about the judgement of others, and they don't seem to be judgemental.</li>
+          <li>They <strong>won't fake a smile</strong> in most kinds of situations, what I also appreciate.</li>
+          <li>I've <strong>not been cheated on prices</strong> (except in markets of course, but that's the rule). Well, not that I know of :D. Someone told me that's a matter of honour to behave this way.</li>
+          <li><strong>Street food is great</strong>.</li>
+          <li>There are security <strong>cameras</strong> everywhere.</li>
+        </ul>
+      </div>
+
+      <span class="location-indicator">Bonuses</span>
+
+      <span class="post-indicator">I'm not fat</span>
+      <div class="gallery">
+        <a href="compressed/han_IMG_20190318_091954.jpg"><img data-bp="compressed/han_IMG_20190318_091954.jpg" src="thumbs/han_IMG_20190318_091954.jpg"></a>
+        <!-- <a href="compressed/han_IMG_20190320_085547.jpg"><img data-bp="compressed/han_IMG_20190320_085547.jpg" src="thumbs/han_IMG_20190320_085547.jpg"></a> -->
+        <!-- <a href="compressed/han_IMG_20190320_090434.jpg"><img data-bp="compressed/han_IMG_20190320_090434.jpg" src="thumbs/han_IMG_20190320_090434.jpg"></a> -->
+      </div>
+
+      <span class="post-indicator">Balec-men</span>
+      <p>Those guys who don't give a fuck about anything.</p>
+      <div class="gallery">
+        <video width="360" height="640" controls  preload="metadata">
+          <source src="videos/balec_VID_20190315_142143.mp4" type="video/mp4">
+        </video>
+        <video width="360" height="640" controls  preload="metadata">
+          <source src="videos/balec_VID_20190319_094605.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <script>
+      (function () {
+
+        /*
+         * Setup galleries.
+         *
+         * Skips the panoramas (image title containing ".vr.") that would be inside the gallery container, because they are better visualised with the browser viewer (it allows to zoom).
+         */
+        (function () {
+          var setupGallery = function(gallery) {
+            // Find gallery pictures
+            var galleryPics = gallery.querySelectorAll('img:not([src*=".vr."])');
+
+            // Open gallery on picture click.
+            var imageLinks = gallery.querySelectorAll('a:not([href*=".vr."])');
+            for (var i = 0; i < imageLinks.length; i++) {
+              imageLinks[i].addEventListener('click', function (e) {
+                e.preventDefault()
+                BigPicture({
+                  el: e.target,
+                  gallery: galleryPics,
+                });
+              })
+            }
+          }
+
+          var galleries = document.querySelectorAll('.gallery')
+          for (var i = 0; i < galleries.length; i++) {
+            setupGallery(galleries[i]);
+          }
+        })();
+
+      })();
+    </script>
+  </body>
 </html>
