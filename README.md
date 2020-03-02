@@ -1,1 +1,3 @@
-My [blog about China](https://wowawiwa.github.io/nihao/), powered by GitHub pages.
+A [blog about my travel in China](https://wowawiwa.github.io/nihao/). 
+
+Powered by GitHub pages.
